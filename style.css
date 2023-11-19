@@ -1,9 +1,31 @@
 *{
     margin: 0;
     padding: 0;
+
+}
+.slider{
+    height: 90vh;
 }
 
 
 img{
-    height: 200px;
+    height: 100%;
+    width: 100%;
+}
+
+.slider_list{
+    /* display: grid;
+    grid-template-columns: repeat(6,100px); */
+    display: flex;
+    gap: 2px;
+    height: 100%;
+}
+
+.slider_list_item{
+width: 20px;
+transition: ease-out .8s;
+}
+
+.active_item{
+    flex-grow:2;
 }
