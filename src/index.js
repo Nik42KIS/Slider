@@ -4,6 +4,7 @@ const rightBtn = document.querySelector('.right_btn')
 
 
 function nextImage(){
+
     const activeImage = document.querySelector('.active_item')
     console.log(activeImage,activeImage.previousElementSibling)
     activeImage.nextElementSibling.classList.add('active_item')
@@ -30,7 +31,6 @@ leftBtn.addEventListener('click', ()=>{
 rightBtn.addEventListener('click',()=>{
     nextImage()
 })
-
 setInterval(()=>{
     nextImage()
 },5000)
