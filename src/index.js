@@ -1,6 +1,8 @@
-const imgItems = document.querySelectorAll('.slider_list_item');
+const imgItems = document.querySelectorAll('.slider_list_item')
+const leftBtn = document.querySelector('.left_btn')
+const rightBtn = document.querySelector('.right_btn')
 
-console.log(imgItems);
+
 
 imgItems.forEach((i) => {
   i.addEventListener('click', (event) => {
@@ -10,9 +12,28 @@ imgItems.forEach((i) => {
 
 function chooseActive(element) {
   imgItems.forEach((item) => {
-    console.log(`i: ${item}`, element.parentElement);
+ 
     item === element.parentElement
       ? element.parentElement.classList.add('active_item')
       : item.classList.remove('active_item');
   });
 }
+function nextImage(){
+    const activeImage = document.querySelector('.active_item')
+    console.log(activeImage,activeImage.previousElementSibling)
+    activeImage.nextElementSibling.classList.add('active_item')
+    activeImage.classList.remove('active_item')
+}
+function previousImage(){
+    const activeImage = document.querySelector('.active_item')
+    console.log(activeImage,activeImage.previousElementSibling)
+    activeImage.previousElementSibling.classList.add('active_item')
+    activeImage.classList.remove('active_item')
+}
+
+leftBtn.addEventListener('click', ()=>{
+    previousImage()
+})
+rightBtn.addEventListener('click',()=>{
+    nextImage()
+})
