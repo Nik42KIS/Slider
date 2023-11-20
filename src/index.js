@@ -3,21 +3,6 @@ const leftBtn = document.querySelector('.left_btn')
 const rightBtn = document.querySelector('.right_btn')
 
 
-
-imgItems.forEach((i) => {
-  i.addEventListener('click', (event) => {
-    chooseActive(event.target);
-  });
-});
-
-function chooseActive(element) {
-  imgItems.forEach((item) => {
- 
-    item === element.parentElement
-      ? element.parentElement.classList.add('active_item')
-      : item.classList.remove('active_item');
-  });
-}
 function nextImage(){
     const activeImage = document.querySelector('.active_item')
     console.log(activeImage,activeImage.previousElementSibling)
@@ -45,3 +30,7 @@ leftBtn.addEventListener('click', ()=>{
 rightBtn.addEventListener('click',()=>{
     nextImage()
 })
+
+setInterval(()=>{
+    nextImage()
+},5000)

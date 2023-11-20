@@ -15,8 +15,6 @@ img {
 }
 
 .slider_list {
-  /* display: grid;
-    grid-template-columns: repeat(6,100px); */
   display: flex;
   gap: 2px;
   height: 100%;
@@ -33,7 +31,7 @@ img {
 .navigation {
   margin-top: 15px;
   display: grid;
-  grid-template-columns: 200px repeat(3, 1fr) 200px;
+  grid-template-columns: 300px repeat(3, 1fr) 300px;
 }
 .circle_list {
   margin: 0 5rem;
@@ -44,24 +42,41 @@ img {
   align-items: center;
 }
 .left_btn {
+
+    display: grid;
   grid-column: 2/3;
   height: 50px;
   width: 100%;
+  font-size: 3.5rem;
+  justify-content: center;
+  align-content: center;
+    border: none;
 }
 .right_btn {
   grid-column: 4/5;
   height: 50px;
-  width: 300px;
+  width: 100%;
+    display: grid;
+  font-size: 3.5rem;
+  justify-content: center;
+  align-content: center;
+  transition: 0.3s;
+  border: none;
+}
+.right_btn:hover, .left_btn:hover{
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
 }
 .circle_list_item {
-  /*  */
   text-decoration: none;
   border: 2px solid white;
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  transition: ease-out 0.5s;
 }
 
-.active_circle{
-    background-color: rgb(240, 240, 240);
+.active_circle {
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 0 7px white;
 }
