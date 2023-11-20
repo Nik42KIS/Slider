@@ -46,7 +46,7 @@ img {
 .left_btn {
   grid-column: 2/3;
   height: 50px;
-  width: 300px;
+  width: 100%;
 }
 .right_btn {
   grid-column: 4/5;
@@ -54,10 +54,14 @@ img {
   width: 300px;
 }
 .circle_list_item {
-  background-color: rgb(240, 240, 240);
+  /*  */
   text-decoration: none;
-  border: none;
+  border: 2px solid white;
   width: 10px;
   height: 10px;
   border-radius: 50%;
+}
+
+.active_circle{
+    background-color: rgb(240, 240, 240);
 }
